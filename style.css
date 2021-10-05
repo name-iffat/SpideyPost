@@ -1,0 +1,117 @@
+@font-face {
+    font-family: Kiona;
+    src: url(./Sources/Font/Kiona-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kiona";
+    color: white;
+}
+body {
+    background: linear-gradient(150deg, #10002b, #3c096c, #e0aaff);
+    min-height: 100vh;
+}
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+#header .logo {
+    display: flex;
+    color: white;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+#header .logo img {
+    max-height: 100px;
+    padding-right: 20px;
+}
+#header .logo h2 {
+    margin-top: 20px;
+    display: flex;
+    font-size: 1.5em;
+}
+#header .logo h2 div {
+    color: #7b2cbf;
+    text-shadow: 2px 2px 4px #ffffff;
+}
+#header .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .navigation li {
+    list-style: none;
+    margin-left: 20px;
+}
+#header .navigation li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
+}
+#header .navigation li a:hover,
+#header .navigation li a.active {
+    background: #c0fdff;
+    color: #000000;
+}
+.container {
+    width: 50%;
+    height: 85vh;
+    background: rgb(224, 170, 255, 0.2);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    left: 0;
+    top: 15%;
+}
+.container1 {
+    width: 50%;
+    height: 85vh;
+    background-image: url(./Sources/pic1.jfif);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: 15%;
+}
+.info {
+    width: 550px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 45%;
+    transform: translate(-50%);
+}
+.info h1 {
+    font-size: 60px;
+    letter-spacing: 10x;
+}
+.info p {
+    color: #f0eef1;
+    font-size: 15px;
+    margin: 20px 0;
+    line-height: 18px;
+}
+.info button {
+    width: 25%;
+    padding: 10px 15px;
+    border: none;
+    background: #c0fdff;
+    border-radius: 20px;
+}
+.info button a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 12px;
+}
