@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Spidey Post | Staff Login</title>
+        <link rel="stylesheet" type="text/css" href="style1.css">
+    </head>
+    <body>
+        <header id="header">
+            <a href="#" class="logo">
+                <img src="../Sources/Logo.png" alt="Logo">
+                <h2><div>Spidey</div> Post</h2>
+            </a>
+            <ul class="navigation">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../typeLogin.html" class="active">Login/Sign Up</a></li>
+            </ul>
+        </header>
+        <div class="container">
+            <div class="bg1">
+
+            </div>
+            <div class="formBox">
+                <div class="form loginForm">
+                    <form method="POST" action="process0.php">
+                        <h3>Staff Log in</h3>
+                        <input type="text" placeholder="Username" name="username">
+                        <input type="password" placeholder="Password" name="password">
+                        <input type="submit" value="Login" name="login">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const loginBtn = document.querySelector('.loginBtn');
+            const signUpBtn = document.querySelector('.signUpBtn');
+            const formBox = document.querySelector('.formBox');
+            const body = document.querySelector('body');
+            const box = document.querySelector('.box');
+
+            signUpBtn.onclick = function(){
+                formBox.classList.add('active')
+                body.classList.add('active')
+                box.classList.add('active')
+            }
+
+            loginBtn.onclick = function(){
+                formBox.classList.remove('active')
+                body.classList.remove('active')
+                box.classList.remove('active')
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,197 @@
+@font-face {
+    font-family: Kiona;
+    src: url(../Sources/Font/Kiona-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kiona";
+    color: white;
+}
+body {
+    background: linear-gradient(150deg, #10002b, #3c096c, #e0aaff);
+    min-height: 100vh;
+}
+body.active {
+    background: linear-gradient(150deg, #10002b, #480ca8, #f72585);
+}
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+#header .logo {
+    display: flex;
+    color: white;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+#header .logo img {
+    max-height: 100px;
+    padding-right: 20px;
+}
+#header .logo h2 {
+    margin-top: 20px;
+    display: flex;
+}
+#header .logo h2 div {
+    color: #7b2cbf;
+}
+#header .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .navigation li {
+    list-style: none;
+    margin-left: 20px;
+}
+#header .navigation li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
+}
+#header .navigation li a:hover,
+#header .navigation li a.active {
+    background: #c0fdff;
+    color: #000000;
+}
+.container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+    top: 200px;
+    left: 28%;
+}
+.bg1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    display: flex;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.15);
+}
+.bg1 .box {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bg1 .box h2 {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.bg1 .box button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #c0fdff;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+}
+.bg1 .box.active button {
+    background: #10002b;
+    color: #ffffff;
+}
+.formBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 110%;
+    background: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.25);
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+.formBox.active {
+    left: 50%;
+}
+.formBox .form {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    transition: 0.5s;
+}
+.formBox .loginForm {
+    transition-delay: 0.25s;
+}
+.formBox.active .loginForm {
+    left: -100%;
+    transition-delay: 0s;
+}
+.formBox .signupForm {
+    left: 100%;
+}
+.formBox.active .signupForm {
+    left: 0;
+}
+.formBox .form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.formBox .form form h3 {
+    font-size: 1.5em;
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.formBox .form form h6 {
+    margin-bottom: 20px;
+    color: red;
+}
+.Gen {
+    width: 50%;
+    display: flex;
+    color: #000000;
+}
+.Gen input {
+    margin-top: 5px;
+}
+.formBox .form form input {
+    color: #000000;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid #333;
+}
+.formBox .form form input[type="submit"] {
+    background: #10002b;
+    border: none;
+    color: #fff;
+    max-width: 100px;
+    cursor: pointer;
+}
+.formBox.active .signupForm input[type="submit"] {
+    background: #7b2cbf;
+    transition: 0.5s;
+}
