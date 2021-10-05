@@ -1,0 +1,77 @@
+<?php
+include('../include/dbconn.php');
+session_start();
+/*if (isset($_POST['submit'])) {
+    include('../include/dbconn.php');
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $gender = $_POST['gender'];
+    $address = $_POST['address'];
+    $email = $_POST['email'];
+    //$level = $_POST['level'];
+
+    //Update data
+    $sql = "UPDATE customer SET
+    custName='$name',
+    gender='$gender',
+    custEmail='$email',
+    custContact='$phone',
+    custddress='$address',
+    password='$password'
+    WHERE username='$username'";
+
+    $sendsql = mysqli_query($dbconn, $sql) or die("Error: " . mysqli_error($dbconn));
+    if ($sendsql) {
+        //check if connection effected earlier row
+        if (mysqli_affected_rows($dbconn) == 0)
+            echo "<b>Update is not successful!</b><br>";
+        else
+            echo "<b>Update is successful!</b><br>";
+    } else
+        echo "Query failed!";
+
+    /*select data to display
+    $sql = "SELECT * FROM customer";
+    $sendsql=mysqli_query($dbconn,$sql);
+    if($sendsql)
+    {
+        //use loop to get data each row
+        foreach($sendsql as $row)
+        echo 
+    }*/
+$username = $_POST['username'];
+
+$i = 0;
+//  if (isset($_POST['submit']))
+
+foreach ($_POST as $sForm => $value) {
+    $postedValue = htmlspecialchars(stripslashes($value), ENT_QUOTES);
+    $valuearr[$i] = $postedValue;
+    $i++;
+}
+
+
+$update = "UPDATE employee SET
+				employeeName='$valuearr[0]',
+				gender='$valuearr[1]',
+				employeeEmail='$valuearr[2]',
+				employeeContact='$valuearr[3]',
+				employeeAddress='$valuearr[4]',
+				password='$valuearr[6]'
+				WHERE username='$valuearr[5]'";
+//echo $update;
+$result = mysqli_query($dbconn, $update) or die("Error: " . mysqli_error($dbconn));
+$sql = "SELECT * FROM employee WHERE username= '$username' ";
+$query = mysqli_query($dbconn, $sql) or die("Error: " . mysqli_error($dbconn));
+$r = mysqli_fetch_assoc($query);
+
+if ($result) {
+    $_SESSION['username'] = $r['employeeName'];
+
+?>
+    <script type="text/javascript">
+        window.location = "view_user.php"
+    </script>
+<?php } ?>

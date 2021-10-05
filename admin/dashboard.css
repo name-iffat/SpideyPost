@@ -1,0 +1,178 @@
+@font-face {
+    font-family: Kiona;
+    src: url(../Sources/Font/Kiona-Regular.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kiona';
+    color: white;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(150deg, #10002b,#3c096c, #e0aaff);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+#header .logo {
+    display: flex;
+    color: white;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+#header .logo img {
+    max-height: 100px;
+    padding-right: 20px;
+}
+#header .logo h2 {
+    margin-top: 20px;
+    display: flex;
+}
+#header .logo h2 div {
+    color: #7b2cbf;
+}
+#header .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .navigation li {
+    list-style: none;
+    margin-left: 20px;
+}
+#header .navigation li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
+}
+#header .navigation li a:hover,
+#header .navigation li a.active {
+    background: #c0fdff;
+    color: #000000;
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    height: 80vh;
+    margin-top: 5%;
+}
+
+.container .bar {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+.container .bar h1 {
+    color: #c0fdff;
+}
+.container a {
+    background: #c0fdff;
+    color: #000000;
+    padding: 6px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.container .error {
+    margin-top: 20px;
+}
+.container .error h4 {
+    color: red;
+}
+.container .logoutbtn {
+    text-align: right;
+}
+.greetinguser h1 {
+    margin-bottom: 15px;
+}
+.greetinguser .track {
+    margin-top: 20px;
+}
+.greetinguser h3 {
+    margin-top: 15px;
+}
+.main {
+    padding-bottom: 50px;
+}
+.tableContent {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 17px;
+    min-width: 400px;
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.tableContent thead tr {
+    color: #9d9171;
+    text-align: center;
+    font-weight: 500;
+}
+
+.tableContent tbody tr {
+    color: #fff;
+    font-weight: 500;
+}
+
+.tableContent th,
+.tableContent td {
+    padding: 12px 25px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+form {
+    margin-left: 17%;
+}
+form input,
+form textarea {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #10002b;
+    color: #fff;
+    resize: none;
+    border-radius: 30px;
+}
+form input[type="submit"],
+form input[type="button"] {
+    background: #c0fdff;
+    color: #000000;
+    font-weight: 500;
+    padding: 7px;
+}
+form input[type="submit"]:hover,
+form input[type="button"]:hover {
+    cursor: pointer;
+}
+fieldset {
+    margin: 25px 0;
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+fieldset h1 {
+    display: flex;
+    margin-left: 17%;
+    padding-top: 50px;
+    font-size: 25px;
+}
